@@ -6,13 +6,21 @@ using namespace std;
 int main (){
 	ifstream source;
 	ofstream dest;
-	source.open("cheerbook.txt") ;
-	dest.open("cheerbook_copy.txt");
-	
-	//กรอก Code เฉพาะส่วนนี้ ให้สอดคล้องกับโจทย์และ Code ส่วนอื่น ๆ 
-	//โดยห้ามแก้ไข Code ในส่วนอื่น ๆ
+	dest.open("C:\\Users\\Lelouch\\Desktop\\lab9\\cheerbook_copy.txt");
+	source.open("C:\\Users\\Lelouch\\Desktop\\lab9\\cheerbook.txt");
+	dest<<"-------------------- BOOM ---------------------";
+	dest.close();
+	string textline;
+	while(getline(source,textline)){
 
+	dest.open("C:\\Users\\Lelouch\\Desktop\\lab9\\cheerbook_copy.txt",ios::app);
+	dest <<"\n"<<textline;
+	dest.close();
+   }
+   	dest.open("C:\\Users\\Lelouch\\Desktop\\lab9\\cheerbook_copy.txt",ios::app);
+	dest<<"\n-------------------- HA!! ---------------------";
+
+	dest.close();
     source.close();
-    dest.close();
 	return 0;
 }
